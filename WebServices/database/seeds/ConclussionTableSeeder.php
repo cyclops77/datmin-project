@@ -13,15 +13,15 @@ class ConclussionTableSeeder extends Seeder
     public function run()
     {
         Conclussion::create([
-            'gejala' => '1,3',
+            'gejala' => '1,3,',
             'penyakit_id' => 1,
         ]);
         Conclussion::create([
-            'gejala' => '2,3,4',
+            'gejala' => '2,3,4,',
             'penyakit_id' => 2,
         ]);
         Conclussion::create([
-            'gejala' => '1,4',
+            'gejala' => '1,4,',
             'penyakit_id' => 3,
         ]);
     }

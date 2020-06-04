@@ -20,7 +20,7 @@
             <span class="text-primary" style="cursor: pointer">{{$hasil->penyakit->nama}}</span>
             </p>
             <p class="lead mt-4">
-                <a class="btn btn-primary" href="#" role="button">Hitung Lagi</a>
+                <a class="btn btn-primary" href="{{url("/cek-penyakit")}}" role="button">Hitung Lagi</a>
             </p>
             </div>
         </div>

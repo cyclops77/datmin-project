@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container mt-2">
     <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="mb-5 text-center">Pilih ya jika anda mengalami gejala berikut ini.</h3>
+        </div>
         @foreach($a as $index => $a)
         <div class="col-md-8 gj" id="gj{{$index}}">
             <div class="card">
                 <div class="card-header text-primary">#{{$index+1}} 
                 <span class="text-dark"> {{$a->nama}}</span>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="height: 250px">
                 <div class="row justify-content-center">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="rd{{$index}}" id="rd{{$index}}" value="ya">
@@ -26,6 +29,27 @@
                     </div>
                 </div>
                 </div>
+                <div class="mb-2 row d-flex justify-content-between">
+                    @if(!$loop->first)
+                    <div class="ml-4 float-left">
+                        <button class="btn btn-primary btnBack" dataID="{{$index-1}}">Kembali</button>
+                    </div>
+                    @else
+                    <div class="ml-4 float-left">
+                    </div>
+                    @endif
+                    
+                    @if(!$loop->last)
+                    <div class="mr-4 float-right">
+                        <button class="btn btn-primary btnLanjut" dataID="{{$index+1}}">Selanjutnya</button>
+                    </div>
+                    @else
+                    <div class="mr-4 float-right">
+                        <a href="{{url('/done')}}" class="btn btn-primary">Selesai</a>
+                    </div>
+                    @endif
+                </div>
+                
             </div>
         </div>
         <script type="text/javascript">
@@ -70,7 +94,7 @@
         
         
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-3">
     <nav aria-label="Page navigation example">
         <ul class="pagination">
 
@@ -97,6 +121,21 @@
 
         $('.pg').on('click', function(){
             var ya = $(this).attr("dataID");
+            $(".gj").hide();
+            $(".mk").removeClass("active");
+            $(".link"+ya).addClass("active");
+            $("#gj"+ya).show();
+        });
+        $(".btnLanjut").on('click', function(){
+            var ya =$(this).attr("dataID");
+            $(".gj").hide();
+            $(".mk").removeClass("active");
+            $(".link"+ya).addClass("active");
+            $("#gj"+ya).show();
+        });
+
+        $(".btnBack").on('click', function(){
+            var ya =$(this).attr("dataID");
             $(".gj").hide();
             $(".mk").removeClass("active");
             $(".link"+ya).addClass("active");
