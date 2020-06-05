@@ -13,13 +13,22 @@ class PenyakitTableSeeder extends Seeder
     public function run()
     {
         Penyakit::create([
-            'nama' => "Penyakit Satu",
+            'nama' => "Darah TInggi",
         ]);
         Penyakit::create([
-            'nama' => "Penyakit Dua",
+            'nama' => "Diabetes",
         ]);
         Penyakit::create([
-            'nama' => "Penyakit Tiga",
+            'nama' => "Penyakit Jantung",
+        ]);
+        Penyakit::create([
+            'nama' => "Penyakit Persendian",
+        ]);
+        Penyakit::create([
+            'nama' => "ISPA",
+        ]);
+        Penyakit::create([
+            'nama' => "Kanker",
         ]);
     }
 }

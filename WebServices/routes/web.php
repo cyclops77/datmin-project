@@ -25,6 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/cek-penyakit','PenyakitController@index');
 
+Route::post('/cek-penyakit','PenyakitController@reload');
+
 Route::get('/done','PenyakitController@show');
 
 Route::post('/store','PenyakitController@store');

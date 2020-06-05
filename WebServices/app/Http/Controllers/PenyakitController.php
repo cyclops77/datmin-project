@@ -105,9 +105,14 @@ class PenyakitController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function reload()
     {
-        //
+        $q = Pilihan::where('user_id',Auth::user()->id);
+        $cek = $q->first();
+        DetailPilihan::where('pilihan_id',$cek->id)->delete();
+        $q->delete();
+
+        return redirect('/cek-penyakit');
     }
 
     /**
