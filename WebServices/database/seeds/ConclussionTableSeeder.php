@@ -33,7 +33,7 @@ class ConclussionTableSeeder extends Seeder
             'penyakit_id' => 5,
         ]);
         Conclussion::create([
-            'gejala' => '1,06,09,10,11,23,24,26,27,28,29,30,',
+            'gejala' => '1,6,9,10,11,23,24,26,27,28,29,30,',
             'penyakit_id' => 6,
         ]);
     }

@@ -2,12 +2,48 @@
 
 @section('content')
 <div class="container mt-2">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h3 class="mb-5 text-center">Pilih ya jika anda mengalami gejala berikut ini.</h3>
+    <div class="row">
+    <div class="col-md-12">
+        <h3 class="mb-5 text-center">Pilih ya jika anda mengalami gejala berikut ini.</h3>
+    </div>
+    <!-- PAGINATE -->
+    <div class="mt-3 col-md-4" style="">
+    <div class="card-header text-center text-primary text-bold">
+        Halaman Gejala
+    </div>
+    <div class="card body">
+    <nav aria-label="Page navigation example">
+    <div class="container">
+        <ul class="pagination">
+            <div class="row justify-content-center m-1 mt-3">
+            @foreach($b as $ia => $b)
+                @if($loop->first)
+                <li class="page-item link{{$ia}} mk active">
+                    <a class="page-link pg" dataID="{{$ia}}">{{$ia+1}}</a>
+                </li>
+                @else
+                <li class="page-item link{{$ia}} mk">
+                    <a class="page-link pg" dataID="{{$ia}}">{{$ia+1}}</a>
+                </li>
+                @endif
+            @endforeach
+            </div>
+        </ul>
         </div>
+    </nav>
+    <div class="row justify-content-center">
+        <div class="btn btn-primary col-md-7 mb-3">
+        Selesai
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-md-8">
+    <div class="row justify-content-center">
+        
         @foreach($a as $index => $a)
-        <div class="col-md-8 gj" id="gj{{$index}}">
+        <div class="col-md-12 gj" id="gj{{$index}}">
             <div class="card">
                 <div class="card-header text-primary">#{{$index+1}} 
                 <span class="text-dark"> {{$a->nama}}</span>
@@ -94,25 +130,10 @@
         
         
     </div>
-    <div class="row justify-content-center mt-3">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-
-            @foreach($b as $ia => $b)
-                @if($loop->first)
-                <li class="page-item link{{$ia}} mk active">
-                    <a class="page-link pg" dataID="{{$ia}}">{{$ia+1}}</a>
-                </li>
-                @else
-                <li class="page-item link{{$ia}} mk">
-                    <a class="page-link pg" dataID="{{$ia}}">{{$ia+1}}</a>
-                </li>
-                @endif
-            @endforeach
-            
-        </ul>
-    </nav>
     </div>
+    
+    </div>
+    
 </div>
 <script>
     $(document).ready(function(){
