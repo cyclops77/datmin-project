@@ -32,9 +32,9 @@
         </div>
     </nav>
     <div class="row justify-content-center">
-        <div class="btn btn-primary col-md-7 mb-3">
+        <a href="{{url('/done')}}" class="btn btn-primary col-md-7 mb-3">
         Selesai
-        </div>
+        </a>
     </div>
     </div>
     </div>
