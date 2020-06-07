@@ -88,5 +88,93 @@ class ConclussionTableSeeder extends Seeder
             'gejala' => '9,10,11,26,27,28,29,30,',
             'penyakit_id' => 6,
         ]);
+
+
+
+        Conclussion::create([
+            'gejala' => '1,2,3,13,',
+            'penyakit_id' => 1,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,2,13,',
+            'penyakit_id' => 1,
+        ]);
+        Conclussion::create([
+            'gejala' => '2,9,10,30,',
+            'penyakit_id' => 2,
+        ]);
+        Conclussion::create([
+            'gejala' => '14,15,16,',
+            'penyakit_id' => 3,
+        ]);
+        Conclussion::create([
+            'gejala' => '17,18,19,',
+            'penyakit_id' => 4,
+        ]);
+        Conclussion::create([
+            'gejala' => '18,19,22,',
+            'penyakit_id' => 4,
+        ]);
+        Conclussion::create([
+            'gejala' => '19,22,',
+            'penyakit_id' => 4,
+        ]);
+        Conclussion::create([
+            'gejala' => '18,19,22,',
+            'penyakit_id' => 4,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,12,24,25,',
+            'penyakit_id' => 5,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,6,9,10,11,23,24,26,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+
+        Conclussion::create([
+            'gejala' => '1,6,9,10,11,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,6,9,10,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,6,9,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '9,10,11,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,11,23,24,26,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,6,9,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,10,11,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,11,23,24,26,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,23,24,26,27,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+        Conclussion::create([
+            'gejala' => '1,28,29,30,',
+            'penyakit_id' => 6,
+        ]);
+
+
+
+
     }
 }
