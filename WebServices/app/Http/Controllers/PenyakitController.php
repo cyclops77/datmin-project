@@ -90,13 +90,18 @@ class PenyakitController extends Controller
     public function show()
     {
         $res = Pilihan::where('user_id',Auth::user()->id)->first();
-        $hasil = Conclussion::where('gejala',$res->gejala)->first();
-        $gej = Gejala::All();
-        $pen = Penyakit::All();
-        $pen2 = Penyakit::All();
-        // dd($hasil->penyakit);
+        if (!$res) {
+            return redirect('/cek-penyakit');
+        }else{
+            
+            $hasil = Conclussion::where('gejala',$res->gejala)->first();
+            $gej = Gejala::All();
+            $pen = Penyakit::All();
+            $pen2 = Penyakit::All();
+            // dd($hasil->penyakit);
 
-        return view('penyakit.hasil', compact('hasil','gej','pen','pen2'));
+            return view('penyakit.hasil', compact('hasil','gej','pen','pen2'));
+        }
     }
 
     /**

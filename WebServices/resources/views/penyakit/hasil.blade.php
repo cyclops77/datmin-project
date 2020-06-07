@@ -35,7 +35,7 @@
                 @endif  
                 @endforeach
             maka penyakitnya adalah 
-            <span class="text-primary" style="cursor: pointer"> Penyakit Yang Teridentifikasi</span>
+            <span class="text-primary" style="cursor: pointer"> Penyakit Yang Tidak Teridentifikasi</span>
             </p>
             <p class="lead mt-4">
                 <form action="{{url('/cek-penyakit')}}" method="POST">
